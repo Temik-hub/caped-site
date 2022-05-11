@@ -6,14 +6,14 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   @media (max-width: 1600px) {
-    @include centering-1600;
-  }
-  @media (max-width: 1399px) {
     max-width: 920px;
   }
   @media (max-width: 999px) {
     padding-left: 60px;
     margin-right: 0;
+  }
+  @media (max-width: 767px) {
+    justify-content: center;
   }
 }
 .hero__sales {
@@ -25,10 +25,8 @@
   @media (max-width: 1399px) {
     max-width: 439px;
   }
-  @media (max-width: 1199px) {
+  @media (max-width: 1599px) {
     max-width: 339px;
-  }
-  @media (max-width: 999px) {
   }
 }
 .hero__img {
@@ -45,10 +43,8 @@
   @media (max-width: 1399px) {
     max-width: 439px;
   }
-  @media (max-width: 1199px) {
+  @media (max-width: 1599px) {
     max-width: 339px;
-  }
-  @media (max-width: 999px) {
   }
 }
 .hero__sales-image {
@@ -80,8 +76,9 @@
     background-position: center;
     background-size: 60%;
     border-radius: 50%;
-    opacity: 0;
+    opacity: 0.8;
     transition: $transition-03;
+    cursor: pointer;
   }
   &:hover {
     box-shadow:  0 5px 10px hsla(250,100%,50%,.5),
@@ -89,7 +86,5 @@
     5px -5px 10px hsla(330,100%,50%,.5),
     5px 0 10px hsla(300,100%,50%,.5);
   }
-  &:hover::after {
-    opacity: 0.8;
-  }
+  
 }

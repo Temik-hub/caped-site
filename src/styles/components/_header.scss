@@ -5,30 +5,26 @@
   align-items: center;
   justify-content: space-between;
   @media (max-width: 1600px) {
-    @include centering-1600;
-  }
-  @media (max-width: 1399px) {
     max-width: 920px;
-  }
-  @media (max-width: 1199px) {
-    max-width: 720px;
-    margin-right: 0;
   }
   @media (max-width: 999px) {
     max-width: none;
     margin-right: 0;
   }
   @media (max-width: 780px) {
-    @include centering;
     padding: 30px 10px;
   }
 }
 .header__logo-wrapper {
-  position: absolute;
-  left: -230px;
+  position: fixed;
+  left: 70px;
+  top: 50px;
   display: flex;
   align-items: center;
   @media (max-width: 999px) {
+    left: 10px;
+  }
+  @media (max-width: 900px) {
     display: none;
   }
 }
@@ -88,6 +84,13 @@
 .header__search {
   display: flex;
   align-items: center;
+  @media (max-width: 1599px) {
+    margin-right: 45px;
+    margin-left: auto;
+  }
+  @media (max-width: 780px) {
+    margin: 0;
+  }
 }
 .header__search-icon {
   display: block;
@@ -104,7 +107,6 @@
   width: 100%;
   max-width: 80px;
   padding-left: 8px;
-  margin-left: 10px;
   font-weight: 500;
   font-size: 17px;
   line-height: 22px;
@@ -116,10 +118,10 @@
     background-color: $secondary-grey;
   }
   @media (max-width: 420px) {
+    position: absolute;
+    bottom: 10px;
+    left: 65px;
     display: none;
-    position: relative;
-    bottom: -40px;
-    left: -50px;
   }
   &--active {
     display: block;
